@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(96, 96, 96);
+    color: white;
+}
+
+h1 {
+    color: #d1e7de;
+}
+
+ul {
+    width: 500px;
+    display: inline-block;
+}
