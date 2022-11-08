@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -13,9 +14,10 @@
     <div id="app">
         <div class="container text-center">
           <h1 class="m-5 text-uppercase">Email List</h1>
-            <ul>
-                <li class="list-group-item list-group-item-success m-2 rounded-pill" v-for="(email, i) in allEmail" v-show="allEmail.length === 10">{{allEmail[i]}}</li>
+            <ul v-if="allEmail.length === 10">
+                <li class="list-group-item list-group-item-success m-2 rounded-pill" v-for="(email, i) in allEmail" >{{allEmail[i]}}</li>
             </ul>   
+            <p v-else><i class="fa-solid fa-spinner"></i></p>
         </div>
        
     </div>
