@@ -10,7 +10,7 @@
     
     <div id="app">
         <ul>
-            <li v-for="(email, i) in allEmail">{{allEmail[i]}}</li>
+            <li v-for="(email, i) in allEmail" v-show="allEmail.length === 10">{{allEmail[i]}}</li>
         </ul>
     </div>
 
